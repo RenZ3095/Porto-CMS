@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 export default function Seo({ title, description, path = '/' }) {
-  const siteName = 'Renz Portfolio';
+  const siteName = 'Fajar A. Saputra';
   const baseUrl = 'https://your-domain.com';
   const url = `${baseUrl}${path}`;
   const fullTitle = `${title} | ${siteName}`;
