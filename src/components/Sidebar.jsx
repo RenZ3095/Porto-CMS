@@ -56,6 +56,8 @@ const iconByKey = {
   'full-stack': <StackIcon />
 };
 
+const cvUrl = import.meta.env.VITE_CV_URL || '';
+
 export default function Sidebar() {
   const menuItems = [
     { label: 'Home', to: '/', icon: <HomeIcon /> },
@@ -96,7 +98,7 @@ export default function Sidebar() {
       </nav>
 
       <a
-        href=""
+        href={cvUrl}
         className="hidden rounded-full bg-cyan-300 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-slate-950 transition hover:bg-cyan-200 md:mt-auto md:inline-flex"
         target="_blank"
         rel="noreferrer"

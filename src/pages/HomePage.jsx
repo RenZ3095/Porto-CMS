@@ -4,7 +4,7 @@ import Seo from '../components/Seo';
 import { categories, getCategoryLabel, testimonials } from '../data/projects';
 import { useProjectsQuery } from '../hooks/useProjectsQuery';
 
-const profilePhoto = '/images/profile-placeholder.webp';
+const profilePhoto = '/images/profile-photo.jpeg';
 
 function cardAnimation(index) {
   return {
@@ -41,8 +41,8 @@ export default function HomePage() {
 
         <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
           <p className="text-xs uppercase tracking-[0.2em] text-cyan-200/80">Profile Photo</p>
-          <img src={profilePhoto} alt="Profile placeholder" className="mt-4 h-64 w-full rounded-xl border border-white/10 object-cover" loading="lazy" />
-          <p className="mt-3 text-xs text-slate-400">Replace `profilePhoto` in `HomePage.jsx` with your own image.</p>
+          <img src={profilePhoto} alt="Fajar profile" className="mt-4 h-64 w-full rounded-xl border border-white/10 object-cover" loading="lazy" />
+          <p className="mt-3 text-xs text-slate-400">Available for web development, portfolio systems, and digital product projects.</p>
         </div>
       </header>
 
