@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Seo from '../components/Seo';
-import { categories, getCategoryLabel } from '../data/projects';
+import { getCategoryLabel } from '../data/projects';
 import { useProjectsQuery } from '../hooks/useProjectsQuery';
 
 const profilePhoto = '/images/profile-photo.jpeg';
@@ -91,22 +91,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mt-12">
-        <h3 className="font-display text-2xl font-semibold md:text-3xl">Browse Categories</h3>
-        <div className="mt-5 grid gap-4 md:grid-cols-3">
-          {categories.map((category, index) => (
-            <motion.div key={category.key} {...cardAnimation(index)}>
-              <Link
-                to={category.path}
-                className="block rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/10"
-              >
-                <p className="text-xs uppercase tracking-[0.18em] text-cyan-200/80">Category</p>
-                <h4 className="mt-2 font-display text-xl font-semibold">{category.title}</h4>
-                <p className="mt-2 text-sm text-slate-300">{category.summary}</p>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
+      <section className="mt-12 rounded-2xl border border-white/10 bg-white/5 p-6">
+        <p className="text-xs uppercase tracking-[0.18em] text-cyan-200/80">Project Focus</p>
+        <h3 className="mt-2 font-display text-2xl font-semibold md:text-3xl">Focused work, clearer story</h3>
+        <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
+          I keep this portfolio focused on projects that are ready to explain: the problem, the process, and the result.
+        </p>
+        <Link
+          to="/projects"
+          className="mt-5 inline-flex rounded-full bg-cyan-300 px-5 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-slate-950 transition hover:bg-cyan-200"
+        >
+          View All Projects
+        </Link>
       </section>
     </div>
   );

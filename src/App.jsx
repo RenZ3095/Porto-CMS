@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import { ADMIN_ROUTE_PATH } from './lib/routes';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
+const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const CategoryPage = lazy(() => import('./pages/CategoryPage'));
 const ProjectDetailPage = lazy(() => import('./pages/ProjectDetailPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
@@ -60,6 +61,7 @@ function PublicShell() {
           <Suspense fallback={<RouteFallback />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/:categoryKey" element={<CategoryPage />} />
               <Route path="/:categoryKey/:projectSlug" element={<ProjectDetailPage />} />

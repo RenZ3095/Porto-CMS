@@ -1,22 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import { categories } from '../data/projects';
 
 function HomeIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4">
       <path d="M3 11.5L12 4l9 7.5" />
       <path d="M6.5 10.5V20h11V10.5" />
-    </svg>
-  );
-}
-
-function PaletteIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4">
-      <path d="M12 3a9 9 0 1 0 0 18h1.5a2.5 2.5 0 0 0 0-5H12a2 2 0 1 1 0-4h2a4 4 0 1 0 0-8h-2z" />
-      <circle cx="7.5" cy="10" r="1" />
-      <circle cx="9.5" cy="7" r="1" />
-      <circle cx="13" cy="7" r="1" />
     </svg>
   );
 }
@@ -31,16 +19,6 @@ function CodeIcon() {
   );
 }
 
-function StackIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4">
-      <path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" />
-      <path d="M3 12l9 4.5 9-4.5" />
-      <path d="M3 16.5L12 21l9-4.5" />
-    </svg>
-  );
-}
-
 function ContactIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-4 w-4">
@@ -50,22 +28,12 @@ function ContactIcon() {
   );
 }
 
-const iconByKey = {
-  'ui-ux': <PaletteIcon />,
-  'web-app': <CodeIcon />,
-  'full-stack': <StackIcon />
-};
-
 const cvUrl = import.meta.env.VITE_CV_URL || '';
 
 export default function Sidebar() {
   const menuItems = [
     { label: 'Home', to: '/', icon: <HomeIcon /> },
-    ...categories.map((category) => ({
-      label: category.label,
-      to: category.path,
-      icon: iconByKey[category.key]
-    })),
+    { label: 'Projects', to: '/projects', icon: <CodeIcon /> },
     { label: 'Contact', to: '/contact', icon: <ContactIcon /> }
   ];
 

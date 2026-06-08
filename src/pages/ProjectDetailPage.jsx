@@ -42,8 +42,8 @@ export default function ProjectDetailPage() {
         path={`/${project.category}/${project.slug}`}
       />
 
-      <Link to={category.path} className="text-sm text-cyan-200 hover:text-cyan-100">
-        Back to {category.title}
+      <Link to="/projects" className="text-sm text-cyan-200 hover:text-cyan-100">
+        Back to Projects
       </Link>
 
       <h2 className="mt-3 font-display text-4xl font-semibold md:text-5xl">{project.title}</h2>
