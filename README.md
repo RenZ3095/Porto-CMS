@@ -24,7 +24,6 @@ Create `.env` from `.env.example`:
 VITE_SUPABASE_URL=https://your-project-ref.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-key
 VITE_ADMIN_PATH=/admin
-VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
 VITE_CONTACT_EMAIL=you@example.com
 VITE_CV_URL=https://example.com/your-cv.pdf
 ```
@@ -62,13 +61,13 @@ The app uses:
 
 1. Push to GitHub.
 2. Import the repo into Vercel.
-3. Add `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, optional `VITE_FORMSPREE_ENDPOINT`, `VITE_CONTACT_EMAIL`, and `VITE_CV_URL`.
+3. Add `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, `VITE_CONTACT_EMAIL`, and `VITE_CV_URL`.
 4. Deploy.
 5. Attach your custom domain.
 
 `VITE_CV_URL` can point to a public Google Drive, Supabase Storage, or other hosted PDF URL. This keeps the CV file out of GitHub while the deployed site can still open it.
 
-`VITE_FORMSPREE_ENDPOINT` enables the contact form. If it is not configured, the contact page falls back to `VITE_CONTACT_EMAIL`.
+`VITE_CONTACT_EMAIL` is used by the contact page's direct email link.
 
 ### Netlify
 
