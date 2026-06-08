@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  background: #020617;
+}
+
+.animated-orb {
+  position: fixed;
+  z-index: -5;
+  border-radius: 9999px;
+  filter: blur(48px);
+  opacity: 0.35;
+  animation: floatOrb 16s ease-in-out infinite;
+}
+
+.orb-one {
+  width: 260px;
+  height: 260px;
+  background: #22d3ee;
+  top: 8%;
+  left: 28%;
+}
+
+.orb-two {
+  width: 220px;
+  height: 220px;
+  background: #38bdf8;
+  top: 52%;
+  right: 8%;
+  animation-delay: -5s;
+}
+
+.orb-three {
+  width: 180px;
+  height: 180px;
+  background: #14b8a6;
+  bottom: 8%;
+  left: 36%;
+  animation-delay: -9s;
+}
+
+.text-shimmer {
+  background: linear-gradient(120deg, #e2e8f0 15%, #67e8f9 38%, #e2e8f0 58%);
+  background-size: 220% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 5s linear infinite;
+}
+
+.admin-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent 90%);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes floatOrb {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -20px, 0) scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-orb,
+  .text-shimmer {
+    animation: none;
+  }
+}
+
