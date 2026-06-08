@@ -90,7 +90,7 @@ export const seedProjects = [
     live: 'https://your-domain.com/portfolio-cms',
     featured: true,
     problem: 'Portfolio updates took too long due to manual code changes.',
-    process: 'Built CRUD APIs, media support, and a simple content editor for rapid publishing.',
+    process: 'I structured the portfolio around a Supabase projects table, connected public pages to published data, then built an admin dashboard for creating, editing, featuring, and uploading project images without touching the codebase.',
     results: 'New projects can now be published in minutes instead of hours.'
   },
   {

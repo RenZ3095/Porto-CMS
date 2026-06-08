@@ -80,7 +80,7 @@ values
     'https://your-domain.com/portfolio-cms',
     true,
     'Portfolio updates took too long due to manual code changes.',
-    'Built CRUD APIs, media support, and a simple content editor for rapid publishing.',
+    'I structured the portfolio around a Supabase projects table, connected public pages to published data, then built an admin dashboard for creating, editing, featuring, and uploading project images without touching the codebase.',
     'New projects can now be published in minutes instead of hours.'
   ),
   (

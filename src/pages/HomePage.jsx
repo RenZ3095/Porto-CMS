@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Seo from '../components/Seo';
-import { categories, getCategoryLabel, testimonials } from '../data/projects';
+import { categories, getCategoryLabel } from '../data/projects';
 import { useProjectsQuery } from '../hooks/useProjectsQuery';
 
 const profilePhoto = '/images/profile-photo.jpeg';
@@ -28,14 +28,13 @@ export default function HomePage() {
 
       <header className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
         <div>
-          <p className="text-sm uppercase tracking-[0.26em] text-cyan-200">Modern Web Portfolio</p>
-          <h2 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight md:text-6xl">
-            I create <span className="text-shimmer ml-2 inline-block">modern digital products</span>
+          <h2 className="max-w-3xl font-display text-4xl font-bold leading-tight md:text-6xl">
+            A curious learner building <span className="text-shimmer ml-2 inline-block">useful web experiences</span>
             <br />
-            from concept to launch.
+            through every project.
           </h2>
           <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 md:text-lg">
-            Explore featured work, browse categories, and open detailed project case studies.
+            I learn by building real projects, improving the details, and turning ideas into clean, responsive digital products.
           </p>
         </div>
 
@@ -106,23 +105,6 @@ export default function HomePage() {
                 <p className="mt-2 text-sm text-slate-300">{category.summary}</p>
               </Link>
             </motion.div>
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-12">
-        <h3 className="font-display text-2xl font-semibold md:text-3xl">Testimonials</h3>
-        <div className="mt-5 grid gap-4 md:grid-cols-3">
-          {testimonials.map((item, index) => (
-            <motion.article
-              key={item.name}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5"
-              {...cardAnimation(index)}
-            >
-              <p className="text-sm leading-6 text-slate-200">"{item.quote}"</p>
-              <p className="mt-4 text-sm font-semibold text-cyan-100">{item.name}</p>
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">{item.role}</p>
-            </motion.article>
           ))}
         </div>
       </section>
