@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function Seo({ title, description, path = '/' }) {
   const siteName = 'Fajar A. Saputra';
-  const baseUrl = 'https://your-domain.com';
+  const baseUrl = (import.meta.env.VITE_SITE_URL || 'https://porto-cms-two.vercel.app').replace(/\/$/, '');
   const url = `${baseUrl}${path}`;
   const fullTitle = `${title} | ${siteName}`;
   const image = `${baseUrl}/og-cover.svg`;
@@ -10,6 +10,7 @@ export default function Seo({ title, description, path = '/' }) {
   return (
     <Helmet>
       <title>{fullTitle}</title>
+      <link rel="canonical" href={url} />
       <meta name="description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={siteName} />

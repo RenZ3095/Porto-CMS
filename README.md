@@ -23,6 +23,7 @@ Create `.env` from `.env.example`:
 ```bash
 VITE_SUPABASE_URL=https://your-project-ref.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-key
+VITE_SITE_URL=https://your-domain.example
 VITE_ADMIN_PATH=/admin
 VITE_CONTACT_EMAIL=
 VITE_CV_URL=
@@ -63,7 +64,7 @@ The app uses:
 
 1. Push to GitHub.
 2. Import the repo into Vercel.
-3. Add `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, `VITE_ADMIN_PATH`, `VITE_CONTACT_EMAIL`, `VITE_CV_URL`, `VITE_GITHUB_URL`, and `VITE_LINKEDIN_URL`.
+3. Add `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, `VITE_SITE_URL`, `VITE_ADMIN_PATH`, `VITE_CONTACT_EMAIL`, `VITE_CV_URL`, `VITE_GITHUB_URL`, and `VITE_LINKEDIN_URL`.
 4. Deploy.
 5. Attach your custom domain.
 
