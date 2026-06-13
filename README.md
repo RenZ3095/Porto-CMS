@@ -24,8 +24,10 @@ Create `.env` from `.env.example`:
 VITE_SUPABASE_URL=https://your-project-ref.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-key
 VITE_ADMIN_PATH=/admin
-VITE_CONTACT_EMAIL=you@example.com
-VITE_CV_URL=https://example.com/your-cv.pdf
+VITE_CONTACT_EMAIL=
+VITE_CV_URL=
+VITE_GITHUB_URL=
+VITE_LINKEDIN_URL=
 ```
 
 ## Supabase setup
@@ -61,13 +63,15 @@ The app uses:
 
 1. Push to GitHub.
 2. Import the repo into Vercel.
-3. Add `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, `VITE_CONTACT_EMAIL`, and `VITE_CV_URL`.
+3. Add `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, `VITE_ADMIN_PATH`, `VITE_CONTACT_EMAIL`, `VITE_CV_URL`, `VITE_GITHUB_URL`, and `VITE_LINKEDIN_URL`.
 4. Deploy.
 5. Attach your custom domain.
 
 `VITE_CV_URL` can point to a public Google Drive, Supabase Storage, or other hosted PDF URL. This keeps the CV file out of GitHub while the deployed site can still open it.
 
-`VITE_CONTACT_EMAIL` is used by the contact page's direct email link.
+`VITE_CONTACT_EMAIL`, `VITE_GITHUB_URL`, and `VITE_LINKEDIN_URL` are used by the contact page and footer links.
+
+Keep personal values in `.env` locally and in Vercel Environment Variables for production. Do not commit real private values to GitHub.
 
 ### Netlify
 

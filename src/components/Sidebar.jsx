@@ -28,7 +28,7 @@ function ContactIcon() {
   );
 }
 
-const cvUrl = import.meta.env.VITE_CV_URL || '';
+const cvUrl = import.meta.env.VITE_CV_URL;
 
 export default function Sidebar() {
   const menuItems = [
@@ -65,14 +65,16 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      <a
-        href={cvUrl}
-        className="hidden rounded-full bg-cyan-300 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-slate-950 transition hover:bg-cyan-200 md:mt-auto md:inline-flex"
-        target="_blank"
-        rel="noreferrer"
-      >
-        View CV
-      </a>
+      {cvUrl ? (
+        <a
+          href={cvUrl}
+          className="inline-flex rounded-full bg-cyan-300 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-slate-950 transition hover:bg-cyan-200 md:mt-auto"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View CV
+        </a>
+      ) : null}
     </aside>
   );
 }
